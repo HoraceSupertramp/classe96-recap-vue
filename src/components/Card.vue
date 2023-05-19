@@ -1,7 +1,6 @@
 <script>
 export default {
     props: {
-        id: String,
         name: String,
         description: String,
         price: String,

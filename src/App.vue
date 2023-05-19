@@ -54,7 +54,7 @@ export default {
         <ul class="menu">
             <li v-for="(pizza, index) in menu.items" :key="index">
                 <Card
-                    :pippo="pizza.name"
+                    :name="pizza.name"
                     :description="pizza.description"
                     :price="pizza.price"
                     :image="pizza.image"
