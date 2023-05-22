@@ -65,6 +65,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    @use './styles/media.scss';
+
     header {
         display: flex;
         align-items: center;
@@ -77,10 +79,20 @@ export default {
             flex-flow: row wrap;
             gap: 1.5em;
 
+            @media (max-width: media.$tablet) {
+                display: block;
+            }
+
             li {
                 flex: 0 0 auto;
-                width: calc((100% - ( 1.5em * 2)) / 3);                
+                width: calc((100% - ( 1.5em * 2)) / 3);   
+                
+                @media (max-width: media.$tablet) {
+                    width: auto;
+                    margin-bottom: 1.5em;
+                }
             }
+
         }
     }
 </style>

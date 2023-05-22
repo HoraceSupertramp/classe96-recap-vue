@@ -31,6 +31,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    @use '../styles/media.scss';
+
     .pizza {
         display: flex;
         background: #fff;
@@ -38,10 +40,20 @@ export default {
         overflow: hidden;
         box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
 
+        @media (max-width: media.$tablet) {
+            display: block;
+        }
+
         img {
             overflow: hidden;
             flex: 1 1 30%;
             object-fit: cover;
+
+            @media (max-width: media.$tablet) {
+                display: block;
+                height: 200px;
+                width: 100%;
+            }
         }
 
         .info {
@@ -58,6 +70,10 @@ export default {
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
+
+            .add-to-cart {
+                margin-left: 1em;
+            }
         }
     }
 </style>
