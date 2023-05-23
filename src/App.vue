@@ -7,13 +7,11 @@ export default {
     },
     data() {
         return {
-            filter: {
-                value: 'Tutte',
-                options: [
-                    'Tutte',
-                    'Vegetariane',
-                ]
-            },
+            filterValue: 'Tutte',
+            filterOptions: [
+                'Tutte',
+                'Vegetariane',
+            ],
             menu: {
                 items: [
                     {
@@ -72,9 +70,9 @@ export default {
     <div class="container-fluid">
         <header class="d-flex px-2 mt-4 align-items-center justify-content-between">
             <h1>Menu</h1>
-            <select v-model="filter.value" class="form-select">
+            <select v-model="filterValue" class="form-select">
                 <option
-                    v-for="option in filter.options"
+                    v-for="option in filterOptions"
                     :value="option"
                 >{{ option }}</option>
             </select>
