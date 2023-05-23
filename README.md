@@ -1,6 +1,6 @@
 # Recap 23/05/23
 
-- Si parte dalla struttura base (branch "initial"), senza componenti innestati dentro App.vue
+- Si parte dalla struttura base (branch "main"), senza componenti innestati dentro App.vue
 
 - Si introducono i componenti Header e Main. A questo punto le informazioni da ```data()``` in App.vue devono fluire verso i componenti figli, che usano queste informazioni nel loro ```<template>```. Abbiamo tre possibilità:
 
