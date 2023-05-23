@@ -56,7 +56,7 @@ export default {
         }
     },
     computed: {
-        filtered() {
+        items() {
             return this.menu.items.filter((item) => {
                 return (
                     this.filterValue === 'Tutte' ||
@@ -66,8 +66,8 @@ export default {
         }
     },
     methods: {
-        onFilter(filterValue) {
-            this.filterValue = filterValue;
+        onFilter(pippo) {
+            this.filterValue = pippo;
         }
     }
 }
@@ -75,7 +75,11 @@ export default {
 
 <template>
     <div class="container-fluid">
-        <Header :filterValue="filterValue" :filterOptions="filterOptions" @filter="onFilter"/>
-        <Main :items="filtered"/>
+        <Header
+            :filterValue="filterValue"
+            :filterOptions="filterOptions"
+            @pippo="onFilter"
+        />
+        <Main :items="items"/>
     </div>
 </template>
