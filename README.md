@@ -1,7 +1,11 @@
-# Vue 3 + Vite
+# Recap 23/05/23
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+- Si parte dalla struttura base (branch "initial"), senza componenti innestati dentro App.vue
 
-## Recommended IDE Setup
+- Si introducono i componenti Header e Main. A questo punto le informazioni da ```data()``` in App.vue devono fluire verso i componenti figli, che usano queste informazioni nel loro ```<template>```. Abbiamo tre possibilità:
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+    - Usiamo le props per passare queste informazioni verso il basso, e gli eventi per passarle verso l'alto (branch final-with-props).
+
+    - Spostiamo le informazioni dal ```data()``` di App.vue in uno stato globale visibile a (e modificabile da) tutti i componenti figli (branch final-with-global-state).
+
+    - Un mescolone dei due punti precedenti.
