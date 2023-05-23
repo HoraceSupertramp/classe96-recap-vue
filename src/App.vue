@@ -7,6 +7,9 @@ export default {
         Header,
         Main,
     },
+    created() {
+        // chiamata all'api e assegnamo il result allo store
+    }
 }
 </script>
 
