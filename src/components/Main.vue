@@ -1,33 +1,20 @@
 <script>
 import Card from './Card.vue';
-import store from '../store';
 
 export default {
     components: {
         Card,
     },
-    data() {
-        return {
-            store,
-        }
+    props: {
+        items: Array,
     },
-    computed: {
-        filtered() {
-            return this.store.menu.items.filter((item) => {
-                return (
-                    this.store.filter.value === 'Tutte' ||
-                    item.vegetarian
-                );
-            })
-        }
-    }
 }
 </script>
 
 <template>
     <main>
         <ul class="row row-cols-md-2 row-cols-lg-3 row-cols-1 g-4">
-            <li v-for="item in filtered" :key="item.name">
+            <li v-for="item in items" :key="item.name">
                 <Card
                     :name="item.name"
                     :description="item.description"
