@@ -1,5 +1,5 @@
 <script>
-import Card from './components/PizzaCard.vue';
+import Card from './components/Card.vue';
 
 export default {
     components: {
