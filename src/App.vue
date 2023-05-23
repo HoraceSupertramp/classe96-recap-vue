@@ -57,7 +57,7 @@ export default {
         filtered() {
             return this.menu.items.filter((item) => {
                 return (
-                    this.filter.value === 'Tutte' ||
+                    this.filterValue === 'Tutte' ||
                     item.vegetarian
                 );
             })
